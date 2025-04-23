@@ -1,0 +1,105 @@
+/* Custom Styles */
+
+/* Define color variables */
+:root {
+    --primary-color: #0d6efd; /* Bootstrap blue, or choose your own */
+    --secondary-color: #6c757d; /* Bootstrap secondary */
+    --light-bg: #f8f9fa;
+    --dark-bg: #212529;
+    --text-light: #f8f9fa;
+    --text-dark: #212529;
+    --card-bg: #ffffff; /* Card background for light theme */
+    --border-color: #dee2e6;
+    --accent-color: #0dcaf0; /* Example: Teal accent */
+}
+
+/* Example Dark Theme Variables (Uncomment to switch) */
+/*
+body[data-bs-theme="dark"] {
+    --light-bg: #212529;
+    --dark-bg: #f8f9fa;
+    --text-light: #212529;
+    --text-dark: #f8f9fa;
+    --card-bg: #2c3034;
+    --border-color: #495057;
+}
+*/
+
+/* Apply Google Font and base styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600; /* Bolder headings */
+}
+
+/* Custom Navbar Style */
+.navbar-custom {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    backdrop-filter: blur(5px); /* Frosted glass effect */
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Style links */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+    color: darken(var(--primary-color), 10%);
+    text-decoration: underline;
+}
+
+.nav-link {
+     font-weight: 400;
+}
+
+.nav-link:hover, .navbar-brand:hover {
+    color: var(--accent-color); /* Accent color on hover */
+}
+
+/* Section padding adjustment for sticky nav */
+.scroll-section {
+    padding-top: 70px; /* Adjust based on your final navbar height */
+    margin-top: -60px; /* Adjust to align correctly */
+}
+
+/* Card styling */
+.card {
+    border: none; /* Remove default border */
+    background-color: var(--card-bg);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Subtle lift effect */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important; /* Enhanced shadow on hover */
+}
+
+.card-title {
+    color: var(--primary-color);
+}
+
+.border-bottom {
+     border-color: var(--border-color) !important;
+}
+
+/* Badge styling */
+.badge {
+    font-size: 0.85em;
+    padding: 0.4em 0.7em;
+}
+
+/* Footer styling */
+footer {
+    border-top: 1px solid var(--border-color);
+    padding-top: 1rem;
+}
+
+/* Add more custom styles below */
